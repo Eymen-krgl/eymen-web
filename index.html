@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eymen'in Kişisel Sayfası</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #f0f8ff, #dbeafe);
+      color: #333;
+      padding: 20px;
+      transition: background 0.3s ease;
+    }
+    body.dark-mode {
+      background: #1a202c;
+      color: #e2e8f0;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 999;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #007bff;
+    }
+    section {
+      background: #ffffffcc;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      animation: fadeInUp 1s;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    form input[type="submit"] {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">
+    <i class="fas fa-moon"></i> Karanlık Mod
+  </button>
+
+  <header>
+    <h1>Merhaba, ben Eymen!</h1>
+    <p>13 yaşındayım, yazılım öğreniyorum ve futbolcuyum ⚽👨‍💻</p>
+  </header>
+
+  <section>
+    <h2><i class="fas fa-user"></i> Hakkımda</h2>
+    <p>Yazılım öğrenmeye Python ve HTML ile başladım. Haftalık planlarımı takip ediyorum.</p>
+    <img src="https://via.placeholder.com/400x200" alt="Benim örnek resmim">
+  </section>
+
+  <section>
+    <h2><i class="fas fa-futbol"></i> Hobilerim</h2>
+    <ul>
+      <li>Futbol oynamak</li>
+      <li>Kod yazmak</li>
+      <li>Yeni fikirler üretmek</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-code"></i> Projelerim</h2>
+    <p>İlk projem: Kendi takip uygulamam 👇</p>
+    <a href="#">Eymen Takip Uygulaması (demo yakında)</a>
+  </section>
+
+  <section>
+    <h2><i class="fas fa-envelope"></i> İletişim</h2>
+    <form>
+      <label for="name">Adın:</label><br>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="message">Mesajın:</label><br>
+      <textarea id="message" name="message" rows="4"></textarea><br><br>
+      <input type="submit" value="Gönder">
+    </form>
+  </section>
+
+</body>
+</html>
